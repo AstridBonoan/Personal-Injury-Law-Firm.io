@@ -17,20 +17,6 @@ export function useScrollProgress() {
   return progress;
 }
 
-export function useDarkMode() {
-  const [dark, setDark] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    return localStorage.getItem('hp-dark-mode') === 'true';
-  });
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', dark);
-    localStorage.setItem('hp-dark-mode', String(dark));
-  }, [dark]);
-
-  return [dark, setDark];
-}
-
 export function useLocalStorage(key, initialValue) {
   const [value, setValue] = useState(() => {
     try {

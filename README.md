@@ -25,7 +25,7 @@ A production-quality **frontend-only** demo website for a fictional personal inj
 - Home, About, Attorneys (with profiles), Practice Areas (with detail pages)
 - Case Results (clearly labeled fictional), How It Works (interactive timeline)
 - Resources (search + category filter), FAQ accordion, Contact consultation form
-- Dark mode toggle, floating consultation CTA, scroll progress indicator
+- Floating consultation CTA, scroll progress indicator
 - “Find Your Practice Area” interactive questionnaire
 - Accessibility-minded markup, SEO meta tags, structured data, `robots.txt` set to noindex
 

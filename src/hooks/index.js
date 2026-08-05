@@ -1,1 +1,1 @@
-export { useScrollProgress, useDarkMode, useLocalStorage, useMediaQuery, usePageTitle } from './useScrollProgress';
+export { useScrollProgress, useLocalStorage, useMediaQuery, usePageTitle } from './useScrollProgress';

@@ -44,30 +44,3 @@
     text-wrap: balance;
   }
 }
-
-/* Dark mode */
-.dark body,
-html.dark body {
-  @apply bg-[#0f1419] text-[#e8e6e0];
-}
-
-html.dark .bg-warm {
-  background-color: #0f1419;
-}
-
-html.dark .bg-white {
-  background-color: #1a1f26;
-}
-
-html.dark .text-ink {
-  color: #e8e6e0;
-}
-
-html.dark .text-charcoal {
-  color: #c5c9d0;
-}
-
-html.dark .border-warm-dark,
-html.dark .border-gray-200 {
-  border-color: #2a3038;
-}

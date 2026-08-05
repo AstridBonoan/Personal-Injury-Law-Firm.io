@@ -22,14 +22,6 @@ describe('Navbar', () => {
     expect(screen.getByRole('button', { name: /open menu/i })).toBeInTheDocument();
   });
 
-  it('toggles dark mode', async () => {
-    const user = userEvent.setup();
-    renderNavbar();
-    const toggle = screen.getByRole('button', { name: /switch to dark mode/i });
-    await user.click(toggle);
-    expect(document.documentElement.classList.contains('dark')).toBe(true);
-  });
-
   it('opens mobile menu with navigation links', async () => {
     const user = userEvent.setup();
     renderNavbar();
