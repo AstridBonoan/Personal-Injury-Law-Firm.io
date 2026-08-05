@@ -1,0 +1,216 @@
+export const portalUser = {
+  name: 'Alex Rivera',
+  email: 'alex.rivera@demo.client',
+  passwordHint: 'demo',
+  caseNumber: 'HP-2025-1847',
+  caseType: 'Car Accident',
+  caseStatus: 'Negotiation',
+  assignedAttorney: 'David Chen',
+  nextAppointment: '2026-08-18T14:00:00',
+};
+
+export const caseTimeline = [
+  { id: 1, stage: 'Consultation', date: '2025-11-03', completed: true },
+  { id: 2, stage: 'Case Accepted', date: '2025-11-10', completed: true },
+  { id: 3, stage: 'Investigation', date: '2025-12-01', completed: true },
+  { id: 4, stage: 'Demand Preparation', date: '2026-03-15', completed: true },
+  { id: 5, stage: 'Negotiation', date: '2026-05-01', completed: false, current: true },
+  { id: 6, stage: 'Resolution', date: null, completed: false },
+];
+
+export const portalDocuments = [
+  {
+    id: 1,
+    name: 'Retainer Agreement (Demo)',
+    type: 'PDF',
+    uploadDate: '2025-11-10',
+    status: 'Available',
+  },
+  {
+    id: 2,
+    name: 'Police Report Summary',
+    type: 'PDF',
+    uploadDate: '2025-11-18',
+    status: 'Available',
+  },
+  {
+    id: 3,
+    name: 'Medical Records — Initial Visit',
+    type: 'PDF',
+    uploadDate: '2025-12-02',
+    status: 'Available',
+  },
+  {
+    id: 4,
+    name: 'Insurance Correspondence Log',
+    type: 'DOCX',
+    uploadDate: '2026-01-14',
+    status: 'Available',
+  },
+  {
+    id: 5,
+    name: 'Demand Package Draft',
+    type: 'PDF',
+    uploadDate: '2026-03-15',
+    status: 'Under Review',
+  },
+  {
+    id: 6,
+    name: 'Wage Loss Worksheet',
+    type: 'XLSX',
+    uploadDate: '2026-03-20',
+    status: 'Needs Client Action',
+  },
+  {
+    id: 7,
+    name: 'Photo Evidence Index',
+    type: 'PDF',
+    uploadDate: '2026-04-02',
+    status: 'Available',
+  },
+  {
+    id: 8,
+    name: 'Settlement Authority Form (Demo)',
+    type: 'PDF',
+    uploadDate: '2026-05-10',
+    status: 'Pending Signature',
+  },
+];
+
+export const portalAppointments = [
+  {
+    id: 1,
+    type: 'Case Strategy Call',
+    date: '2026-08-18',
+    time: '2:00 PM',
+    attorney: 'David Chen',
+    status: 'upcoming',
+  },
+  {
+    id: 2,
+    type: 'Document Review',
+    date: '2026-09-02',
+    time: '11:00 AM',
+    attorney: 'David Chen',
+    status: 'upcoming',
+  },
+  {
+    id: 3,
+    type: 'Medical Update Check-In',
+    date: '2026-09-20',
+    time: '3:30 PM',
+    attorney: 'Elena Vasquez',
+    status: 'upcoming',
+  },
+  {
+    id: 4,
+    type: 'Initial Consultation',
+    date: '2025-11-03',
+    time: '10:00 AM',
+    attorney: 'David Chen',
+    status: 'past',
+  },
+  {
+    id: 5,
+    type: 'Investigation Update',
+    date: '2026-01-22',
+    time: '1:00 PM',
+    attorney: 'David Chen',
+    status: 'past',
+  },
+  {
+    id: 6,
+    type: 'Demand Review Meeting',
+    date: '2026-03-18',
+    time: '4:00 PM',
+    attorney: 'Jonathan Pierce',
+    status: 'past',
+  },
+];
+
+export const portalMessages = [
+  {
+    id: 1,
+    from: 'David Chen',
+    role: 'attorney',
+    body: 'Alex, I’ve reviewed the latest medical notes. Let’s discuss next steps on our strategy call.',
+    timestamp: '2026-08-04T09:15:00',
+    unread: true,
+  },
+  {
+    id: 2,
+    from: 'Alex Rivera',
+    role: 'client',
+    body: 'Thank you. I’ll have my questions ready for Monday.',
+    timestamp: '2026-08-04T10:02:00',
+    unread: false,
+  },
+  {
+    id: 3,
+    from: 'Portal Notifications',
+    role: 'system',
+    body: 'A new document was shared: Settlement Authority Form (Demo).',
+    timestamp: '2026-08-03T16:40:00',
+    unread: true,
+  },
+  {
+    id: 4,
+    from: 'David Chen',
+    role: 'attorney',
+    body: 'Please upload your completed wage loss worksheet when convenient.',
+    timestamp: '2026-07-28T14:20:00',
+    unread: false,
+  },
+  {
+    id: 5,
+    from: 'Alex Rivera',
+    role: 'client',
+    body: 'I’ve started the worksheet and will upload it this week.',
+    timestamp: '2026-07-28T18:05:00',
+    unread: false,
+  },
+  {
+    id: 6,
+    from: 'Elena Vasquez',
+    role: 'attorney',
+    body: 'Confirming I can join the September medical update if helpful.',
+    timestamp: '2026-07-15T11:30:00',
+    unread: false,
+  },
+  {
+    id: 7,
+    from: 'David Chen',
+    role: 'attorney',
+    body: 'Demand package draft is available for your review in Documents.',
+    timestamp: '2026-03-15T17:00:00',
+    unread: false,
+  },
+  {
+    id: 8,
+    from: 'Alex Rivera',
+    role: 'client',
+    body: 'Reviewed and noted—thank you for the clear summary.',
+    timestamp: '2026-03-16T09:45:00',
+    unread: false,
+  },
+];
+
+export const portalTasks = [
+  { id: 1, title: 'Upload identification', completed: true },
+  { id: 2, title: 'Review case documents', completed: true },
+  { id: 3, title: 'Complete client questionnaire', completed: false },
+  { id: 4, title: 'Confirm August strategy appointment', completed: false },
+  { id: 5, title: 'Upload wage loss worksheet', completed: false },
+  { id: 6, title: 'Review settlement authority form', completed: false },
+  { id: 7, title: 'Provide updated medical provider list', completed: true },
+  { id: 8, title: 'Sign demo acknowledgment', completed: true },
+  { id: 9, title: 'Share additional accident photos', completed: false },
+  { id: 10, title: 'Verify preferred contact method', completed: false },
+];
+
+export const portalNotifications = [
+  { id: 1, text: 'Upcoming appointment on Aug 18', time: '1d ago', unread: true },
+  { id: 2, text: 'New message from David Chen', time: '2d ago', unread: true },
+  { id: 3, text: 'Document shared: Settlement Authority Form', time: '3d ago', unread: true },
+  { id: 4, text: 'Task reminder: Complete questionnaire', time: '5d ago', unread: false },
+];

@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+# Demo site — discourage indexing of fictional legal content
+User-agent: *
+Disallow: /
