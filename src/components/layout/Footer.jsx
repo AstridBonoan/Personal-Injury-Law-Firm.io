@@ -7,25 +7,43 @@ export default function Footer() {
   const location = useLocation();
   if (location.pathname.startsWith('/client-portal')) return null;
 
+  const exploreLinks = navigation.filter((item) => item.path !== '/');
+  const mid = Math.ceil(exploreLinks.length / 2);
+  const col1 = exploreLinks.slice(0, mid);
+  const col2 = exploreLinks.slice(mid);
+
   return (
     <footer className="bg-charcoal text-warm/90" role="contentinfo">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 md:grid-cols-2 md:px-6 lg:grid-cols-4">
         <div>
-          <p className="font-heading text-2xl font-semibold text-warm">Hartwell & Pierce</p>
-          <p className="mt-1 text-xs uppercase tracking-[0.2em] text-gold">Law</p>
+          <Link to="/" className="inline-block" aria-label={`${firmInfo.name} home`}>
+            <p className="font-heading text-2xl font-semibold text-warm">Hartwell & Pierce</p>
+            <p className="mt-1 text-xs uppercase tracking-[0.2em] text-gold">Law</p>
+          </Link>
           <p className="mt-4 text-sm leading-relaxed text-warm/70">{firmInfo.tagline}</p>
         </div>
         <div>
           <h2 className="mb-4 font-heading text-lg text-warm">Explore</h2>
-          <ul className="space-y-2 text-sm">
-            {navigation.slice(0, 6).map((item) => (
-              <li key={item.path}>
-                <Link to={item.path} className="hover:text-gold">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+            <ul className="space-y-2">
+              {col1.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="hover:text-gold">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className="space-y-2">
+              {col2.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="hover:text-gold">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div>
           <h2 className="mb-4 font-heading text-lg text-warm">Contact</h2>
@@ -51,6 +69,9 @@ export default function Footer() {
               </a>
             </li>
           </ul>
+          <Link to="/contact" className="mt-4 inline-block text-sm font-semibold text-gold hover:underline">
+            Schedule a consultation →
+          </Link>
         </div>
         <div>
           <h2 className="mb-4 font-heading text-lg text-warm">Hours</h2>
@@ -59,7 +80,10 @@ export default function Footer() {
             <li>{firmInfo.hours.saturday}</li>
             <li>{firmInfo.hours.sunday}</li>
           </ul>
-          <Link to="/client-portal" className="mt-6 inline-block text-sm text-gold hover:underline">
+          <Link
+            to="/client-portal/login"
+            className="mt-6 inline-block text-sm text-gold hover:underline"
+          >
             Client Portal Demo →
           </Link>
         </div>

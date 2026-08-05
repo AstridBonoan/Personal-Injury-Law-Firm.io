@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './hooks/useAuth';
 import MainLayout from './components/layout/MainLayout';
 import PortalLayout from './components/portal/PortalLayout';
+import ScrollToTop from './components/common/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Attorneys from './pages/Attorneys';
@@ -27,6 +28,7 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter basename={BASE_PATH}>
+        <ScrollToTop />
         <Routes>
           <Route element={<MainLayout />}>
             <Route index element={<Home />} />

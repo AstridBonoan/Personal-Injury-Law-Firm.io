@@ -20,6 +20,7 @@ export const firmInfo = {
     'Hartwell & Pierce Law is a fictional law firm created for demonstration purposes only. All attorneys, case results, testimonials, statistics, and legal information are fictional. This website does not provide legal advice, and no attorney-client relationship is created by using this demo.',
 };
 
+/** Full site navigation — paths must match App.jsx routes. */
 export const navigation = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
@@ -31,6 +32,9 @@ export const navigation = [
   { label: 'FAQ', path: '/faq' },
   { label: 'Contact', path: '/contact' },
 ];
+
+/** Primary desktop links (logo covers Home). */
+export const primaryNav = navigation.filter((item) => item.path !== '/');
 
 export const socialLinks = [
   { label: 'LinkedIn', href: '#', icon: 'linkedin' },
