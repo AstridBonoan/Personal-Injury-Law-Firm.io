@@ -1,4 +1,4 @@
-export const BASE_PATH = '/Personal-Injury-Law-Firm';
+export const BASE_PATH = '/Personal-Injury-Law-Firm.io';
 
 export function withBase(path = '/') {
   if (!path || path === '/') return `${BASE_PATH}/`;

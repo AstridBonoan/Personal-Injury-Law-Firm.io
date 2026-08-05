@@ -2,7 +2,7 @@
 
 A production-quality **frontend-only** demo website for a fictional personal injury law firm, including a mock client portal. Built as a portfolio example of modern legal marketing UX and client experience software.
 
-**Live site (GitHub Pages):** https://astridbonoan.github.io/Personal-Injury-Law-Firm/
+**Live site (GitHub Pages):** https://astridbonoan.github.io/Personal-Injury-Law-Firm.io/
 
 > **Important:** Hartwell & Pierce Law is fictional. All attorneys, case results, testimonials, statistics, and legal information are for demonstration only. This site does not provide legal advice and does not create an attorney-client relationship.
 
@@ -87,9 +87,9 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite (typically `http://localhost:5173/Personal-Injury-Law-Firm/`).
+Open the local URL printed by Vite (typically `http://localhost:5173/Personal-Injury-Law-Firm.io/`).
 
-> The Vite `base` is set to `/Personal-Injury-Law-Firm/` for GitHub Pages subdirectory hosting. Local routes use that basename as well.
+> The Vite `base` is set to `/Personal-Injury-Law-Firm.io/` for GitHub Pages subdirectory hosting. Local routes use that basename as well.
 
 ### Lint & format
 
@@ -119,8 +119,8 @@ npm run preview
 
 ### Configuration
 
-- `vite.config.js` sets `base: '/Personal-Injury-Law-Firm/'` (repo name)
-- React Router uses `basename="/Personal-Injury-Law-Firm"`
+- `vite.config.js` sets `base: '/Personal-Injury-Law-Firm.io/'` (repo name)
+- React Router uses `basename="/Personal-Injury-Law-Firm.io"`
 - `public/404.html` implements the SPA redirect strategy for direct client-side routes
 - `index.html` restores the redirected path on load
 - `.nojekyll` is written during CI so underscore assets are served correctly
@@ -146,7 +146,7 @@ On every push to `main` / `master` (or manual `workflow_dispatch`):
 
 After the first successful workflow run, the site will be available at:
 
-`https://astridbonoan.github.io/Personal-Injury-Law-Firm/`
+`https://astridbonoan.github.io/Personal-Injury-Law-Firm.io/`
 
 ### Manual deploy notes
 
