@@ -18,7 +18,8 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
+    /* Prefer instant jumps on route change; in-page anchors can still use scrollIntoView */
+    scroll-behavior: auto;
   }
 
   body {
